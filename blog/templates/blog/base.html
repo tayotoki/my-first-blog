@@ -26,7 +26,10 @@
                 <p class="top-menu">Привет, {{ user.username }}! <small>(<a href="{% url 'logout' %}">Выйти</a>)</small></p>
             {% else %}
                 <a href="{% url 'login' %}" class="top-menu">
-                    <span class="glyphicon glyphicon-lock"></span>
+                    <span> {% include './icons/file-person.svg' %} Войти</span>
+                </a>
+                <a href="{% url 'login' %}" class="top-menu">
+                    <span> {% include './icons/file-lock2-fill.svg' %} Создать аккаунт</span>
                 </a>
             {% endif %}
             <h1>
