@@ -9,5 +9,10 @@
                 <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
                 <p>{{ post.text|linebreaksbr }}</p>
             </div>
+            
+            <div data-gb-custom-block data-tag="url" data-0='post_detail'>
+                <a href="">Комментарии: {{ post.comments.count }}</a>
+                <div class="line"></div>
+            </div>
     {% endfor %}
 {% endblock %}
